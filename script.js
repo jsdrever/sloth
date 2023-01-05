@@ -32,54 +32,97 @@
 // todo - make a timer
 //timer function @
 
+var timeEl = document.querySelector(".time");
+
+// Selects element by id
+// var mainEl = document.getElementById("main");
+
+var secondsLeft = 100;
+
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeEl.textContent = secondsLeft + " seconds left";
+
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+      // Calls function to create and append image
+    //   sendMessage();
+    }
+
+  }, 1000);
+}
+
+setTime();
+
+
 // todo - start btn
 
 // todo - collect score
-var score = 0
-var correct = 0
-let correctAns = true
+// var score = 0
+// var correct = 0
+// let correctAns = true
 
-if(userChoice() === correctAns); {
-    correct++
-}
+// if(userChoice() === correctAns); {
+//     correct++
+// }
 
 
 //todo - make a quiz
 // incorrect / correct prompts
-let questions = [
-    {
-        question: "what is 2 + 2?",
-        choice1: "2",
-        choice2: "4",
-        choice3: "5",
-        choice4: "8",
-        answer: 2,
-    },
-    {
-        question: "what is my dogs name?",
-        choice1: "Riley",
-        choice2: "Dogmeat",
-        choice3: "Pookie",
-        choice4: "Cuddle-Bug",
-        answer: 1,
-    },
-    {
-        question: "Is my dog a good boy?",
-        choice1: "nah, he's fat",
-        choice2: "ew, I don't like him",
-        choice3: "He's ok, I guess...",
-        choice4: "OMG! Yes. I love him.",
-        answer: 4,
-    },
-    {
-        question: "what this educational?",
-        choice1: "91.412 million miles",
-        choice2: "7.837 billion as of 2021",
-        choice3: "It was educational for you to build this and that's what really mattered",
-        choice4: "The Triassic Period",
-        answer: 3,
-    },
-]
+// let questions = [
+//     {
+//         question: "what is 2 + 2?",
+//         choice1: "2",
+//         choice2: "4",
+//         choice3: "5",
+//         choice4: "8",
+//         answer: 2,
+//     },
+//     {
+//         question: "what is my dogs name?",
+//         choice1: "Riley",
+//         choice2: "Dogmeat",
+//         choice3: "Pookie",
+//         choice4: "Cuddle-Bug",
+//         answer: 1,
+//     },
+//     {
+//         question: "Is my dog a good boy?",
+//         choice1: "nah, he's fat",
+//         choice2: "ew, I don't like him",
+//         choice3: "He's ok, I guess...",
+//         choice4: "OMG! Yes. I love him.",
+//         answer: 4,
+//     },
+//     {
+//         question: "what this educational?",
+//         choice1: "91.412 million miles",
+//         choice2: "7.837 billion as of 2021",
+//         choice3: "It was educational for you to build this and that's what really mattered",
+//         choice4: "The Triassic Period",
+//         answer: 3,
+//     },
+// ]
 // todo - end game after timer is out or no questions remain
 
 // todo - save initials and score
+
+
+// var counter = document.querySelector("#counter");
+// var addButton = document.querySelector("#add");
+// var subtractButton = document.querySelector("#subtract");
+
+// var count = localStorage.getItem("count");
+
+// counter.textContent = count;
+
+// addButton.addEventListener("click", function() {
+//   if (count < 24) {
+//     count++;
+//     counter.textContent = count;
+//     localStorage.setItem("count", count);
+//   }
+// });
