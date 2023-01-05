@@ -48,7 +48,7 @@ function setTime() {
     if(secondsLeft === 0) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
-      // Calls function to create and append image
+     
     //   sendMessage();
     }
 
@@ -59,7 +59,19 @@ setTime();
 
 
 // todo - start btn
+var generateQuiz = document.querySelector('.btn')
+generateQuiz.addEventListener('click', fucntion() {
+    getQuestion();
 
+    if(correct)
+
+    for (var i = 0; i < testLength; i++) {
+        var randomItem = randomCharacter(characterTypes)
+        password = password + randomItem
+    }
+    getScore();
+
+});
 // todo - collect score
 // var score = 0
 // var correct = 0
@@ -72,7 +84,7 @@ setTime();
 
 //todo - make a quiz
 // incorrect / correct prompts
-// let questions = [
+// var questions = [
 //     {
 //         question: "what is 2 + 2?",
 //         choice1: "2",
